@@ -889,6 +889,7 @@ GameObject:
   - component: {fileID: 477052181}
   - component: {fileID: 477052180}
   - component: {fileID: 477052182}
+  - component: {fileID: 477052183}
   m_Layer: 5
   m_Name: Panel-PvP
   m_TagString: Untagged
@@ -970,6 +971,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Slots: {fileID: 646636932}
+  TicTacToeResolver: {fileID: 477052183}
+--- !u!114 &477052183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 477052178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d3c3cdbb9d944c27b867b17d4f18b31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &558988822
 GameObject:
   m_ObjectHideFlags: 0
@@ -1391,7 +1405,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PawSprite: {fileID: 21300000, guid: 7ccac9b99e13c6144a09f1423330d5bf, type: 3}
   PantherSprite: {fileID: 21300000, guid: d287fd10ff923a84f86bf2d795a58966, type: 3}
+  BlankSprite: {fileID: 21300000, guid: a08c99df68d0ec34bb8ef3506e0af46d, type: 3}
   Game: {fileID: 477052182}
+  SlotsList:
+  - {fileID: 1497125612}
+  - {fileID: 1506822285}
+  - {fileID: 1376982749}
+  - {fileID: 281859617}
+  - {fileID: 1800109503}
+  - {fileID: 2054760868}
+  - {fileID: 1939179842}
+  - {fileID: 832984399}
+  - {fileID: 865248355}
 --- !u!1 &681629322
 GameObject:
   m_ObjectHideFlags: 0
@@ -1472,7 +1497,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 681629325}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 477052182}
+        m_MethodName: Reset
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &681629325
 MonoBehaviour:
   m_ObjectHideFlags: 0

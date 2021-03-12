@@ -1,7 +1,7 @@
 ﻿public enum MarkerType
 {
     None,
-    Pawm,
+    Paw,
     Panther,
     Tie
 }
