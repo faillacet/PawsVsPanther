@@ -29,6 +29,31 @@ public class Slots : MonoBehaviour
         return slotOccupants;
     }
 
+     public void Reset()
+    {
+        ResetSlotOccupants();
+        ResetSlotImages();
+    }
+
+    public Slot RandomFreeSlot() {
+        List<int> emptySlotIndicies = FindEmptySlotIndicies();
+
+        int randomIndex = Random.Range(0, emptySlotIndicies.Count);
+        int randomSlotIndex = emptySlotIndicies[randomIndex];
+        return SlotsList[randomSlotIndex];
+    }
+
+    private List<int> FindEmptySlotIndicies() {
+        List<int> emptySlotIndicies = new List<int>();
+
+        for (int i = 0; i < SlotsList.Count; i++) {
+            if (SlotsList[i].isEmpty())
+                emptySlotIndicies.Add(i);
+        }
+
+        return emptySlotIndicies;
+    }
+
     private void SetSlotOccupant(Slot slot, MarkerType markerType)
     {
         int slotIndex = slot.SlotNumber - 1;
@@ -43,13 +68,6 @@ public class Slots : MonoBehaviour
             slot.Mark(PawSprite);
     }
 
-    public void Reset()
-    {
-        ResetSlotOccupants();
-        ResetSlotImages();
-
-      
-    }
 
     private void ResetSlotImages()
     {

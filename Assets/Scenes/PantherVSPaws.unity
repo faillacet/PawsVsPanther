@@ -448,6 +448,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5653860744406277418, guid: 8a4736cef1fc98642b26fbc6d2f7bb66,
         type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5653860744406277418, guid: 8a4736cef1fc98642b26fbc6d2f7bb66,
+        type: 3}
       propertyPath: m_Group
       value: 
       objectReference: {fileID: 2041454330}
@@ -460,6 +465,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsOn
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5653860744406277418, guid: 8a4736cef1fc98642b26fbc6d2f7bb66,
+        type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5653860744406277418, guid: 8a4736cef1fc98642b26fbc6d2f7bb66,
+        type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5653860744406277418, guid: 8a4736cef1fc98642b26fbc6d2f7bb66,
+        type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2041454331}
+    - target: {fileID: 5653860744406277418, guid: 8a4736cef1fc98642b26fbc6d2f7bb66,
+        type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnButtonPressed
+      objectReference: {fileID: 0}
+    - target: {fileID: 5653860744406277418, guid: 8a4736cef1fc98642b26fbc6d2f7bb66,
+        type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5653860744406277418, guid: 8a4736cef1fc98642b26fbc6d2f7bb66,
+        type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8710200005210609940, guid: 8a4736cef1fc98642b26fbc6d2f7bb66,
         type: 3}
@@ -972,6 +1007,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Slots: {fileID: 646636932}
   TicTacToeResolver: {fileID: 477052183}
+  TurnDisplay: {fileID: 1206437013}
+  WinnerDisplay: {fileID: 1029152844}
+  GameMode: {fileID: 2041454331}
 --- !u!114 &477052183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1122,7 +1160,7 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
-  m_UseSpriteMesh: 0
+  m_UseSpriteMesh: 1
   m_PixelsPerUnitMultiplier: 1
 --- !u!222 &592168962
 CanvasRenderer:
@@ -1272,6 +1310,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5653860744406277418, guid: 8a4736cef1fc98642b26fbc6d2f7bb66,
         type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5653860744406277418, guid: 8a4736cef1fc98642b26fbc6d2f7bb66,
+        type: 3}
       propertyPath: m_Group
       value: 
       objectReference: {fileID: 2041454330}
@@ -1279,6 +1322,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Transition
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5653860744406277418, guid: 8a4736cef1fc98642b26fbc6d2f7bb66,
+        type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5653860744406277418, guid: 8a4736cef1fc98642b26fbc6d2f7bb66,
+        type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5653860744406277418, guid: 8a4736cef1fc98642b26fbc6d2f7bb66,
+        type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2041454331}
+    - target: {fileID: 5653860744406277418, guid: 8a4736cef1fc98642b26fbc6d2f7bb66,
+        type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnButtonPressed
+      objectReference: {fileID: 0}
+    - target: {fileID: 5653860744406277418, guid: 8a4736cef1fc98642b26fbc6d2f7bb66,
+        type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5653860744406277418, guid: 8a4736cef1fc98642b26fbc6d2f7bb66,
+        type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a4736cef1fc98642b26fbc6d2f7bb66, type: 3}
@@ -1791,6 +1864,7 @@ GameObject:
   - component: {fileID: 1029152841}
   - component: {fileID: 1029152843}
   - component: {fileID: 1029152842}
+  - component: {fileID: 1029152844}
   m_Layer: 5
   m_Name: Panel-WinnerIcon
   m_TagString: Untagged
@@ -1855,6 +1929,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1029152840}
   m_CullTransparentMesh: 0
+--- !u!114 &1029152844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1029152840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 208267dc07016144683ddfc1f0ae4c19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WinnerImage: {fileID: 592168961}
+  PantherSprite: {fileID: 21300000, guid: 2ef9e40cb00bbb740b7eff44c2bea6b6, type: 3}
+  PawSprite: {fileID: 21300000, guid: 1bb1d86986b84ba49a165c280fb3eb33, type: 3}
+  TieSprite: {fileID: 21300000, guid: 05154865914c96144acbbdea82ce2e16, type: 3}
+  BlankSprite: {fileID: 21300000, guid: a08c99df68d0ec34bb8ef3506e0af46d, type: 3}
 --- !u!1 &1122114251
 GameObject:
   m_ObjectHideFlags: 0
@@ -1949,6 +2040,7 @@ GameObject:
   - component: {fileID: 1206437010}
   - component: {fileID: 1206437012}
   - component: {fileID: 1206437011}
+  - component: {fileID: 1206437013}
   m_Layer: 5
   m_Name: Panel-CurrentTurnIcon
   m_TagString: Untagged
@@ -2013,6 +2105,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1206437009}
   m_CullTransparentMesh: 0
+--- !u!114 &1206437013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1206437009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcaa6e8ccf0574f428acb4c5af25009a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TurnImage: {fileID: 558988824}
+  PantherSprite: {fileID: 21300000, guid: 2ef9e40cb00bbb740b7eff44c2bea6b6, type: 3}
+  PawSprite: {fileID: 21300000, guid: 1bb1d86986b84ba49a165c280fb3eb33, type: 3}
 --- !u!114 &1376982747 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1549482720190431690, guid: b8bc2b5d8699f8043b5ba1c4d91f7ff8,
@@ -3207,6 +3314,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5653860744406277418, guid: 8a4736cef1fc98642b26fbc6d2f7bb66,
         type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5653860744406277418, guid: 8a4736cef1fc98642b26fbc6d2f7bb66,
+        type: 3}
       propertyPath: m_Group
       value: 
       objectReference: {fileID: 2041454330}
@@ -3219,6 +3331,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsOn
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5653860744406277418, guid: 8a4736cef1fc98642b26fbc6d2f7bb66,
+        type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5653860744406277418, guid: 8a4736cef1fc98642b26fbc6d2f7bb66,
+        type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5653860744406277418, guid: 8a4736cef1fc98642b26fbc6d2f7bb66,
+        type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2041454331}
+    - target: {fileID: 5653860744406277418, guid: 8a4736cef1fc98642b26fbc6d2f7bb66,
+        type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnButtonPressed
+      objectReference: {fileID: 0}
+    - target: {fileID: 5653860744406277418, guid: 8a4736cef1fc98642b26fbc6d2f7bb66,
+        type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5653860744406277418, guid: 8a4736cef1fc98642b26fbc6d2f7bb66,
+        type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8710200005210609940, guid: 8a4736cef1fc98642b26fbc6d2f7bb66,
         type: 3}
@@ -3678,6 +3820,7 @@ GameObject:
   - component: {fileID: 2041454329}
   - component: {fileID: 2041454328}
   - component: {fileID: 2041454330}
+  - component: {fileID: 2041454331}
   m_Layer: 5
   m_Name: Panel-GameType
   m_TagString: Untagged
@@ -3757,6 +3900,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AllowSwitchOff: 0
+--- !u!114 &2041454331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041454326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59876c7e3be8b6c47886f827f4b8d1f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TicTacToeGame: {fileID: 477052182}
 --- !u!114 &2054760866 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1549482720190431690, guid: b8bc2b5d8699f8043b5ba1c4d91f7ff8,

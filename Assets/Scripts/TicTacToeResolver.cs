@@ -24,6 +24,10 @@ public class TicTacToeResolver : MonoBehaviour
 
     }
 
+    public MarkerType Winner() {
+        return winner;
+    }
+
     public void CheckForEndOfGame(List<MarkerType> slotOccupants)
     {
         foreach(List<int> winningConfiguration in winningConfigurations)
