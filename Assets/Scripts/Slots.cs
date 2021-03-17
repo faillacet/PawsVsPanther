@@ -35,6 +35,11 @@ public class Slots : MonoBehaviour
         ResetSlotImages();
     }
 
+    public Slot GetSlot(int slotIndex)
+    {
+        return SlotsList[slotIndex];
+    }
+
     public Slot RandomFreeSlot() {
         List<int> emptySlotIndicies = FindEmptySlotIndicies();
 

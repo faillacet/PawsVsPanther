@@ -52,10 +52,73 @@ public class TicTacToeResolver : MonoBehaviour
         }
     }
 
+
     public bool NoWinner()
     {
         return winner == MarkerType.None;
     }
+
+    public int FindBestSlotIndexForPlayer(List<MarkerType> slotOccupants, MarkerType markerType)
+    {
+        foreach(List<int> winningConfiguration in winningConfigurations)
+            {
+            int bestIndex = EmptyWinningSlotIndex(winningConfiguration, slotOccupants, markerType);
+            if (bestIndex != -1)
+                return bestIndex;
+            }
+        return -1;
+    }
+
+
+    private int EmptyWinningSlotIndex(List<int> winningConfiguration, List<MarkerType> slotOccupants, MarkerType markerType)
+    {
+        // find empty slot
+        int emptySlotIndex = FindEmptySlotIndex(winningConfiguration, slotOccupants);
+        // if no empty slot, return -1
+
+        if (emptySlotIndex == -1)
+            return -1;
+
+        // if found other player marker in the filled slots, return -1
+        bool foundOtherPlayer = IsFoundOtherPlayer(winningConfiguration, slotOccupants, emptySlotIndex, markerType);
+        if (foundOtherPlayer)
+            return -1;
+        // return the emptuy slot
+        return winningConfiguration[emptySlotIndex];
+    }
+
+    private int FindEmptySlotIndex(List <int> winningConfiguration, List<MarkerType> slotOccupants)
+    {
+        int blankSlotIndex = -1;
+
+        for (int i = 0; i< winningConfiguration.Count; i++)
+        {
+            int slotToExamine = winningConfiguration[i];
+            if (slotOccupants[slotToExamine]== MarkerType.None)
+            {
+                blankSlotIndex = 1;
+                break;
+            }
+        }
+
+        return blankSlotIndex;
+    }
+
+    private bool IsFoundOtherPlayer(List<int> winningConfiguration, List<MarkerType> slotOccupants, int emptySlotIndex, MarkerType ourMarkerType)
+    {
+        bool foundOtherPlayer = false;
+        for (int i = 0; i < winningConfiguration.Count; i++)
+        {
+            if (i != emptySlotIndex)
+            {
+                int slotToExamine = winningConfiguration[i];
+                if (ourMarkerType != slotOccupants[slotToExamine])
+                        foundOtherPlayer = true;
+            }
+        }
+        return foundOtherPlayer;
+    }
+
 
     private bool isTie(List<MarkerType> slotOccupants)
     {

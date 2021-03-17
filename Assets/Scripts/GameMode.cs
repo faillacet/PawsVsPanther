@@ -7,6 +7,8 @@ public class GameMode : MonoBehaviour
     public TicTacToeGame TicTacToeGame;
     private OpponentType currentOpponentType;
 
+    public Sounds Sounds;
+
    void Start() {
        currentOpponentType = OpponentType.Human;
    }
@@ -34,6 +36,7 @@ public class GameMode : MonoBehaviour
 
     private void ChangeOpponentType(OpponentType opponentType) {
         if (opponentType != currentOpponentType) {
+            Sounds.PlayGameModeSound();
             currentOpponentType = opponentType;
             TicTacToeGame.ChangeOpponent();
         }

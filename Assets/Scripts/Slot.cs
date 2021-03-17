@@ -28,6 +28,7 @@ public class Slot : MonoBehaviour
         SetTexture(sprite);
     }
 
+
     public void Mark(Sprite markerSprite)
     {
         isMarked = true;
