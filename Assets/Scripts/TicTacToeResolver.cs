@@ -60,12 +60,12 @@ public class TicTacToeResolver : MonoBehaviour
 
     public int FindBestSlotIndexForPlayer(List<MarkerType> slotOccupants, MarkerType markerType)
     {
-        foreach(List<int> winningConfiguration in winningConfigurations)
-            {
+        foreach (List<int> winningConfiguration in winningConfigurations)
+        {
             int bestIndex = EmptyWinningSlotIndex(winningConfiguration, slotOccupants, markerType);
             if (bestIndex != -1)
                 return bestIndex;
-            }
+        }
         return -1;
     }
 
@@ -76,14 +76,16 @@ public class TicTacToeResolver : MonoBehaviour
         int emptySlotIndex = FindEmptySlotIndex(winningConfiguration, slotOccupants);
         // if no empty slot, return -1
 
-        if (emptySlotIndex == -1)
+        if (emptySlotIndex == -1) {
             return -1;
+        }
 
         // if found other player marker in the filled slots, return -1
         bool foundOtherPlayer = IsFoundOtherPlayer(winningConfiguration, slotOccupants, emptySlotIndex, markerType);
-        if (foundOtherPlayer)
+        if (foundOtherPlayer) {
             return -1;
-        // return the emptuy slot
+        }
+        // return the empty slot
         return winningConfiguration[emptySlotIndex];
     }
 
@@ -96,7 +98,7 @@ public class TicTacToeResolver : MonoBehaviour
             int slotToExamine = winningConfiguration[i];
             if (slotOccupants[slotToExamine]== MarkerType.None)
             {
-                blankSlotIndex = 1;
+                blankSlotIndex = i;
                 break;
             }
         }
